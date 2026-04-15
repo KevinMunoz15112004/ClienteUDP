@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="test.CalculadoraController" spacing="10" alignment="CENTER">
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10" />
+    </padding>
+    <children>
+        <Label text="Calculadora UDP" style="-fx-font-size:16px;-fx-font-weight:bold;" />
+
+        <GridPane hgap="8" vgap="8">
+            <columnConstraints>
+                <ColumnConstraints halignment="RIGHT" minWidth="80" />
+                <ColumnConstraints minWidth="180" />
+            </columnConstraints>
+            <children>
+                <Label text="Número 1:" GridPane.rowIndex="0" GridPane.columnIndex="0" />
+                <TextField fx:id="tfN1" GridPane.rowIndex="0" GridPane.columnIndex="1" />
+
+                <Label text="Número 2:" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+                <TextField fx:id="tfN2" GridPane.rowIndex="1" GridPane.columnIndex="1" />
+
+                <Label text="Operación:" GridPane.rowIndex="2" GridPane.columnIndex="0" />
+                <ChoiceBox fx:id="cbOp" GridPane.rowIndex="2" GridPane.columnIndex="1" />
+
+                <Label text="Servidor (IP):" GridPane.rowIndex="3" GridPane.columnIndex="0" />
+                <TextField fx:id="tfIP" GridPane.rowIndex="3" GridPane.columnIndex="1" />
+
+                <Label text="Puerto:" GridPane.rowIndex="4" GridPane.columnIndex="0" />
+                <TextField fx:id="tfPort" GridPane.rowIndex="4" GridPane.columnIndex="1" />
+            </children>
+        </GridPane>
+
+        <HBox spacing="8">
+            <children>
+                <Button text="Enviar" fx:id="btnEnviar" onAction="#onEnviar" />
+                <Button text="Limpiar" onAction="#onLimpiar" />
+            </children>
+        </HBox>
+
+        <Label text="Respuesta del servidor:" />
+        <TextArea fx:id="taRespuesta" prefRowCount="6" wrapText="true" />
+    </children>
+</VBox>
+
