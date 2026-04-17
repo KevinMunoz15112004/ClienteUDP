@@ -15,9 +15,5 @@ public class Launcher extends Application {
         primaryStage.setScene(new Scene(root, 400, 360));
         primaryStage.show();
     }
-
-    public static void main(String[] args) {
-        launch(args);
-    }
 }
 

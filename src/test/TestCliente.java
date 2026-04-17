@@ -1,7 +1,8 @@
 package test;
 
 public class TestCliente {
-    public static void main(String[] args) {
-        Launcher.main(args);
+    static void main(String[] args) {
+        Launcher.launch(Launcher.class, args);
     }
+
 }
